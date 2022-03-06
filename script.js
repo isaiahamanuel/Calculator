@@ -71,21 +71,34 @@ function operate() {
     if (calc.operator == "+") {
         calc.answer = parseInt(calc.firstOperand) + parseInt(calc.secondOperand);
         calc.display = calc.answer;
+        calc.secondOperand = null;
+        calc.operator = null;
+        calc.firstOperand = calc.answer;
+
         displayValue.innerText = calc.answer;
     }
     else if (calc.operator == "-") {
         calc.answer = parseInt(calc.firstOperand) - parseInt(calc.secondOperand);
         calc.display = calc.answer;
+        calc.secondOperand = null;
+        calc.operator = null;
+        calc.firstOperand = calc.answer;
         displayValue.innerText = calc.answer;
     }
     else if (calc.operator == "*") {
         calc.answer = parseInt(calc.firstOperand) * parseInt(calc.secondOperand);
         calc.display = calc.answer;
+        calc.secondOperand = null;
+        calc.operator = null;
+        calc.firstOperand = calc.answer;
         displayValue.innerText = calc.answer;
     }
     else if (calc.operator == "÷") {
         calc.answer = (parseInt(calc.firstOperand) / parseInt(calc.secondOperand));
         calc.display = calc.answer;
+        calc.secondOperand = null;
+        calc.operator = null;
+        calc.firstOperand = calc.answer;
         displayValue.innerText = calc.answer;
     }
 }
