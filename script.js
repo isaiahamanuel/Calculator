@@ -42,9 +42,14 @@ function runCalculator() {
 
             }
             else {
+                if (calc.operator != null) {
+                    operate();
+                }
+                else {
 
-                calc.operator = btn.innerText;
-                calc.display = calc.operator;
+                    calc.operator = btn.innerText;
+                    calc.display = calc.operator;
+                }
             }
             updateDisplay();
 
